@@ -1,0 +1,69 @@
+<div class="html-element-wrapper">
+  <p>Read the text below paying close attention to detail:</p>
+  <span>{{content}}</span>
+  <br />
+  <br />
+  <a href="%7B%7Burl%7D%7D" target="_blank"></a>
+  <a href="{{url}}" target="_blank">Click here to open the original post for additional information.</a>
+</div>
+
+<!-- 1. radio button -->
+<cml:radios id="ids" label="What is the author&#x27;s sentiment (feeling) throughout the post as it relates to MLB trade rumors?" validates="required" gold="true">
+  <cml:radio label="Positive" value="1" />
+  <cml:radio label="Neutral" value="2" />
+  <cml:radio label="Negative" value="3" />
+</cml:radios>
+
+<cml:radios id="ids" label="What is the author&#x27;s sentiment (feeling) throughout the post as it relates to COVID19?" validates="required" gold="true">
+  <cml:radio label="Positive" value="1" />
+  <cml:radio label="Neutral" value="2" />
+  <cml:radio label="Negative" value="3" />
+</cml:radios>
+
+
+<!-- 2. single check box -->
+<cml:checkbox label="A single checkbox Question" validates="required" />
+
+<!-- 3. check boxes -->
+<cml:checkboxes label="Sample checkboxes 1:" validates="required">
+  <cml:checkbox label="Checkbox 1" checked="true" />
+  <cml:checkbox label="Checkbox 2" />
+  <cml:checkbox label="Checkbox 3" />
+</cml:checkboxes>
+
+<cml:checkboxes label="Sample checkboxes 2:" validates="required">
+  <cml:checkbox label="Checkbox 1" checked="true" />
+  <cml:checkbox label="Checkbox 2" />
+  <cml:checkbox label="Checkbox 3" />
+</cml:checkboxes>
+
+<!-- 4. group -->
+<!-- show check boxes if check a single box -->
+<cml:checkbox label="Show extra fields?" name="show_extras" validates="required" />
+<cml:group only-if="!show_extras:unchecked">
+  <cml:text label="Sample text field:" instructions="Enter text above" />
+  <cml:checkboxes validates="required" label="Sample checkboxes group:">
+    <cml:checkbox label="Checkbox 1" />
+    <cml:checkbox label="Checkbox 2" />
+    <cml:checkbox label="Checkbox 3" />
+  </cml:checkboxes>
+</cml:group>
+
+<!-- 5. rates -->
+<cml:ratings label="Rate me 1" points="4" validates="required" />
+<cml:ratings label="Rate me 2" points="4" validates="required" />
+<cml:ratings label="Rate me 3" points="4" validates="required" />
+
+<!-- 6. select  -->
+<cml:select label="Sample select box:" validates="required">
+  <cml:option label="Option 1" />
+  <cml:option label="Option 2" />
+  <cml:option label="Option 3" />
+</cml:select>
+
+
+<!-- 7. text field -->
+<cml:text label="Sample text field (such as enter your email):" validates="required" />
+
+<!-- 8. textarea -->
+<cml:textarea label="Sample text area:" validates="required" />
