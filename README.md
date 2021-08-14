@@ -9,7 +9,7 @@ Please refer to our full paper for more details.
 - `example_cml.html`: Different type of helper tags used to create different type of tasks on the Figure Eight crowdsourcing platform of Appen.
 
 ## Usage
-- Replace "your_tracking_server_url" in the JavaScript library with the url of your server that used to store collected features.
+- Replace "your_tracking_server_url" in the JavaScript library (`FBQC.js`) with the url of your server that used to store collected features.
 - Include our JavaScript library in the “Javascript” field to the design webpage on the Figure Eight crowdsourcing platform of Appen.
 
 
